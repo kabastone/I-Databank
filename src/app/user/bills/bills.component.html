@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-xs-3 col-lg-3">
+    <nav class="nav flex-column nav-pills">
+      <a class="nav-link active" [routerLink]="['pending-transaction']">En cours </a>
+      <a class="nav-link" [routerLink]="['completed-transaction']">Terminées</a>
+    </nav>
+  </div>
+  <div class="col-xs-9 col-lg-9">
+    <router-outlet>
+
+    </router-outlet>
+  </div>
+
+</div>

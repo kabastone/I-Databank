@@ -1,0 +1,24 @@
+ <div class="container-fluid">
+   <div class="card">
+     <div class="card-body">
+       <div class="card-title"><h5>Actualités</h5></div>
+       <div class="list-group">
+         <a style="cursor: pointer" class="list-group-item list-group-item-action"
+            *ngFor="let actu of actus">
+           <div class="row">
+             <div class="col-5">
+               <img src="{{actu.imgPath}}" alt="..." class="img-fluid">
+             </div>
+             <div class="col">
+               <p [ngStyle]="{'font-size':actu.titre.length > 20 ? '13px': 'auto' }">
+                 {{actu.titre}}
+               </p>
+             </div>
+           </div>
+         </a>
+       </div>
+     </div>
+
+   </div>
+
+ </div>

@@ -1,0 +1,15 @@
+<div class="list-group">
+  <a style="cursor: pointer" class="list-group-item list-group-item-success"
+     *ngFor="let data of dataCart">
+    <div class="row">
+      <div class="col-xs-12">
+        <h3 class="list-group-item-heading">{{data.nom}}</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-8">
+        <p class="list-group-item-text">{{data.description}}</p>
+      </div>
+    </div>
+  </a>
+</div>

@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-xs-4 col-lg-4">
+    <nav class="nav flex-column nav-pills">
+      <a class="nav-link active" [routerLink]="['user-manage']">Gestion des membres</a>
+      <a class="nav-link" [routerLink]="['payment-preference']">Préférence de versement</a>
+      <a class="nav-link" [routerLink]="['notification-center']">Centre de notification</a>
+      <a class="nav-link" [routerLink]="['policy']">Sécurité</a>
+      <a class="nav-link" [routerLink]="['setting']">Paramètre</a>
+    </nav>
+  </div>
+  <div class="col-xs-8 col-lg-8">
+    <router-outlet>
+
+    </router-outlet>
+  </div>
+</div>

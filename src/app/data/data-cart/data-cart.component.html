@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="list-group">
+    <a style="cursor: pointer" class="list-group-item list-group-item-action list-group-item-light"
+       *ngFor="let data of dataCart">
+      <div class="row">
+        <div class="col-xs-12">
+          <h2 class="list-group-item-heading">{{data.nom}}</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-8">
+          <p>{{data.description}}</p>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col">
+          <button class="btn-outline-success" type="button">
+            Acheter
+          </button>
+          <button class="btn-outline-danger" type="button">
+            Annuler
+          </button>
+        </div>
+      </div>
+
+    </a>
+  </div>
+
+</div>

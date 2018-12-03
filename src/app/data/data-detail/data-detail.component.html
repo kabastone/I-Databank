@@ -1,0 +1,123 @@
+<div class="row">
+  <div class="col-xs-12 col-md-12 col-lg-12">
+    <div class="btn-group mr-3 float-right" role="group">
+      <button class="btn btn-outline-secondary" type="button"
+           [routerLink]="['view']"
+           routerLinkActive="active"
+           (click)="onView()">
+          Aperçu
+      </button>
+      <div ngbDropdown class="btn-group" role="group">
+        <button class="btn btn-outline-secondary" id="dropdownBasic1" ngbDropdownToggle>Visualiser</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <a class="dropdown-item" [routerLink]="['visualisation', 'bar']">Bar</a>
+          <a class="dropdown-item" [routerLink]="['visualisation', 'pie-chart']">Pie chart</a>
+          <a class="dropdown-item">Carte</a>
+        </div>
+      </div>
+      <button class="btn btn-outline-secondary" type="button"
+              [routerLink]="['cart']"
+              routerLinkActive="active">
+        Ajouter au panier
+      </button>
+      <button class="btn btn-outline-secondary" type="button">
+        API
+      </button>
+      <div ngbDropdown class="btn-group" role="group">
+        <button class="btn btn-outline-secondary" id="dropdownBasic2" ngbDropdownToggle>...</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button class="dropdown-item">Contacter le propriétaire</button>
+          <button class="dropdown-item">Partager</button>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="row d-flex justify-content-center w-100">
+  <div class="col-xs-12 col-md-12 col-lg-12">
+    <div class="card">
+      <div class="card-header">
+        <h5>{{data.name}}</h5>
+
+      </div>
+      <div class="card-body">
+        <div class="col-xs-4">
+          <div class="card-title"><h6>{{data.categorie}}</h6></div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="row">
+              <div class="col-xs-2">
+                <p class="card-text">
+                  <span class="badge badge-light"><strong>Description</strong></span>
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <p class="card-text">{{data.description}}
+              </p>
+            </div>
+          </div>
+
+            <div class="col">
+              <div class="row">
+                <p class="card-text"> <span class="badge badge-light"><strong>Mise a jour </strong></span></p>
+              </div>
+
+               <div class="row">
+                <p class="card-text">{{data.date | date: 'shortDate'}}</p>
+              </div>
+            </div>
+        </div>
+        <!--</div> fin premiere ligne-->
+          <div class="row">
+            <div class="col">
+              <div class="row"><p class="card-text"><span class="badge badge-light"> <strong>Nombre de vue</strong></span>
+
+              </p>
+              </div>
+              <div class="row">
+                <p class="card-text"> <span class="badge badge-pill badge-secondary">{{data.view}}</span></p>
+              </div>
+
+            </div>
+          </div>
+          <!--</div> fin ligne 2 -->
+            <div class="row">
+              <div class="col">
+                <div class="row">
+                  <p class="card-text">
+                  <span class="badge badge-light">
+                    <strong>Auteur</strong></span>
+                </div>
+                <div class="row">
+                  <p class="card-text">IDEV</p>
+                </div>
+              </div>
+              <div class="col">
+                <div class="row">
+                  <div class="col">
+                    <p class="card-text"> <span class="badge badge-light"><strong>Format</strong></span>
+                    </p>
+                  </div>
+                    <div class="row">
+                      <p class="card-text">Fichier CSV</p>
+                    </div>
+                  </div>
+
+              </div>
+              </div>
+          <!--</div> fin ligne 3 -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-md-12 col-lg-12">
+    <router-outlet>
+      <app-data-view [dataView]="data" [affiche]="isView"></app-data-view>
+    </router-outlet>
+
+  </div>
+</div>
