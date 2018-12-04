@@ -1,9 +1,0 @@
-<div class="card" style="width: 50rem">
-  <div class="col-xs-12 list-group">
-    <app-data-item
-      *ngFor="let dataEl of dataList; let i = index" [data]="dataEl" [index]="i"
-      (dataSelected)="onSelectedData(dataEl)">
-    </app-data-item>
-  </div>
-</div>
-
